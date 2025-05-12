@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "infer"
+version = "0.0.1"
+description = "Fine tune an open-source small language model or quantized large language model to extract disease data and classify research article abstracts into cancer and non-cancer categories"
+authors = [
+  { name = "Mayank Anand" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.10"
+
+
+[tool.ruff]
+line-length = 99
+src = ["infer"]
+include = ["pyproject.toml", "infer/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["infer"]
+force-sort-within-sections = true
+
