@@ -12,4 +12,8 @@ ruff
 scikit-learn
 tqdm
 typer
+torch
+langchain
+llama-cpp-python
+langchain-community
 -e .
